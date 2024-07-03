@@ -57,4 +57,10 @@ console.log(5 + "3", 5 - "2", "add and div");
 
 // *different null and undefiend*
 console.log("falsy", !!null);
-console.log("falsy", !!undefined);
+console.log("falsy", Boolean(undefined));
+
+let und;
+console.log(typeof und, "type of undefined");
+let nul = null;
+console.log(typeof nul, "type of null");
+console.log(null == undefined, null === undefined, "conditios");
