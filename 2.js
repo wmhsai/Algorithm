@@ -50,13 +50,92 @@ w("a", "b", "c");
 
 //Function Expression => function without nazme to use a Variable
 const welcome = function (name) {
-    return `Welcome to our app, ` + name;
-  };
+  return `Welcome to our app, ` + name;
+};
 
-  // Function Declaration
-function welcome() {
-    // ...
+// Function Declaration
+// function welcome() {
+//     // ...
+//   }
+
+//arrow function dont have arguments replace on use Rest
+
+
+while (true) {
+  if (true) {
+    break; //customize stop our loop
   }
+}
+let counter = 0;
+
+// while (counter <= 100) {
+//   counter++;
+//   if (counter % 2 === 1) {
+//     continue;  //ignore this condition
+//   }
+//   console.log(counter);
+// }
+
+do {
+  counter++;
+  console.log(counter, "do while counter****");
+}
+while (counter < 0);
 
 
-  //arrow function dont have arguments replace on use Rest
+while (counter < 0) {
+  counter++;
+  console.log(counter, "while counter****");
+}
+
+const user = {
+  "first name": "Emily",
+  name: "hello",
+};
+
+user["first name"];
+user.name = "bye"
+console.log(user.name, "name after assign");
+delete user.name;
+console.log(user.name, "name after delete");
+
+//user.first name;  syntax error
+//user.first-name;  error: name is not defined
+//user.first.name;  error: user.first is undefined
+
+// const input = prompt("Enter a property name:");
+// alert(user[input]);
+
+const x = { name: "John" }
+const y = { name: "John" }
+
+console.log(x === y, "check condition"); // false
+//because of refrence in memory
+
+
+const q = { name: "John" }
+const z = q;
+z.name = "Emily";
+console.log(x.name); // Emily
+console.log(z === q, "check condition"); //same refrnce
+
+//property be a function = method
+const userObj = {
+  sayHello() {
+    console.log("Hello");
+  },
+}
+userObj.sayHello()
+
+//this => access to property name outside of method
+const user = {
+  name: "Mario",
+  getName() {
+    return this.name;
+  },
+  welcome() {
+    return this.getName();
+  },
+}
+
+console.log(user.welcome()); 
